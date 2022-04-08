@@ -1,1 +1,67 @@
+using namespace std;
+class Input{
+  public:
+    void cetak(){
+      cout<<"Memilih Layanan cloud: \n";
+      cout<<"1) Shared Hosting  : 300 ribu\n";
+      cout<<"2) VPS Server      : 930 ribu\n";
+      cout<<"3) Cloud Server    : 5   juta\n";
+      cout<<"4) Domain Name     : 280 ribu\n";
+      cout<<"Masukan pilihanmu  : ";cin>>pilih;
+      switch(pilih){
+        case 1: harga=300; break;
+        case 2: harga=930; break;
+        case 3: harga=5; break;
+        case 4: harga=280;
+      }
+    }
+  private:
+    int pilih, harga;
+};
+  using namespace std;
 
+class Proses {
+    public :
+      void cetak (){
+       
+      }
+      void getData(){
+        ambil_data.open("../dummy/out_input.txt");
+        ambil_data.close();  
+      }
+      
+    }
+
+      void region(){
+        
+      }
+
+    private :
+        ifstream ambil_data;
+        int pilih;
+        int harga;
+};  
+using namespace std;
+class Output{
+  public:
+    void output(){
+      cout<<"Jenis Layanan Cloud: "<<data_file[0]<<endl;
+      cout<<"Harga: "<<data_file[1]<<endl;
+      cout<<"User Region: "<<data_file[2]<<endl;
+      cout<<"Diskon: "<<data_file[3]<<endl;
+      cout<<"Total: "<<data_file[4]<<endl;
+      }
+
+    void getData(){
+      ambil_data.open("../dummy/out_struk.txt");
+      while(!ambil_data.eof()){
+        ambil_data>>data_file[index];
+        index += 1;
+      }
+      ambil_data.close();
+    }
+    private:
+        ifstream ambil_data;
+        string data_file[30];
+        int index = 0;
+};
